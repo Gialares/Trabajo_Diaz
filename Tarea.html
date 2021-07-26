@@ -1,0 +1,133 @@
+<HTML>
+<HEAD><TITLE>Objeto Radio</TITLE>
+
+<title>Documento sin título</title>
+<style>
+body{
+    background-color: #0CF6FA;
+    font-family: Arial;
+
+}
+#main-container{
+    margin: 150px auto;
+    width:600px;
+
+}
+table{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    padding: 20px;
+}
+
+thead{
+    background-color: #246355;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+
+}
+tr:hover td{
+    background-color: #369681;
+    color: white;
+}
+</style>
+
+<script language="JavaScript">
+function informar(){
+var men=" ";
+men+="Se ha seleccionado: \n Tarjeta Madre..: ";
+for (j=0; j<form1.placa.length; j++){
+if (form1.placa[j].checked){
+men+=document.form1.placa[j].value
+}
+}
+men+="\n Procesador..: ";
+for (j=0; j<form1.procesador.length; j++){
+if (form1.procesador[j].checked){
+men+=document.form1.procesador[j].value
+}
+}
+
+
+
+men+="\n Memoria RAM..: ";
+for (j=0; j<form1.memoria.length; j++){
+if (form1.memoria[j].checked){
+men+=document.form1.memoria[j].value
+}
+}
+
+
+
+men+="\n Disco Duro..: ";
+for (j=0; j<form1.dduro.length; j++){
+if (form1.dduro[j].checked){
+men+=document.form1.dduro[j].value
+}
+}
+
+
+
+alert(men);
+
+
+
+}
+
+
+
+</script></head>
+
+
+
+<body><center><h1>Manejando los objetos Radio</h1></center>
+<form name="form1" action="javascript:informar()">
+Selecciona las opciones deseadas ... <br><br>
+<Table border=1>
+<tr align=center><td>Tarjetas Madre_Placa</td><td>Procesador</td><td>Memoria</td><td>Disco Duro</td></tr>
+<td> <input type=radio name="placa" value="DP55WB INTEL P55-core i3/i5/i7" checked>DP55WB INTEL P55-core i3/i5/i7<br>
+<input type=radio name="placa" value="GA-P55-US3L INTEL P55">GA-P55-US3L INTEL P55-core i3/i5/i7<br>
+<input type=radio name="placa" value="P55H-A INTEL P55">P55H-A INTEL P55-core i3/i5/i7<br>
+</td>
+<td>
+<input type=radio name="procesador" value="INTEL Core2 Duo 2.93GHz 3MB">INTEL Core2 Duo 2.93GHz 3MB<br>
+<input type=radio name="procesador" value="INTEL Core i3 3.06GHz DUAL CORE" checked>INTEL Core i3 3.06GHz DUAL CORE<br>
+<input type=radio name="procesador" value="INTEL Core i7 2.93GHz QUAD CORE">INTEL Core i7 2.93GHz QUAD CORE<br>
+</td>
+
+
+
+<td>
+<input type=radio name="memoria" value="DDR3 1GB 1333MHz KINGSTON">DDR3 1GB 1333MHz KINGSTON<br>
+<input type=radio name="memoria" value="DDR3 2GB 1333MHz KINGSTON" checked>DDR3 2GB 1333MHz KINGSTON<br>
+<input type=radio name="memoria" value="DDR3 2GB 1333MHz PATRIOT CON DISIPADOR">DDR3 2GB 1333MHz PATRIOT CON DISIPADOR<br>
+</td>
+
+
+
+<td>
+<input type=radio name="dduro" value="SEAGATE 320 GB 7200 RPM S-ATA" checked>SEAGATE 320 GB 7200 RPM S-ATA<br>
+<input type=radio name="dduro" value="SEAGATE 500 GB 7200 RPM S-ATA">SEAGATE 500 GB 7200 RPM S-ATA<br>
+<input type=radio name="dduro" value="SEAGATE 1000 GB 7200 RPM S-ATA">SEAGATE 1000 GB 7200 RPM S-ATA<br>
+</td>
+
+
+
+</tr>
+</table>
+<br>
+
+
+
+<input type=submit name="cmdEnviar" value="Enviar">
+<input type=reset name="cmdLimpiar" value="Limpiar">
+<button onclick="location.href='index.html'">Inicio</button>
+
+
+</form></body></html>
